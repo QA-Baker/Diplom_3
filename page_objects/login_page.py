@@ -1,9 +1,9 @@
 from locators.login_page_locators import LoginPageLocators
-from page_objects.main_page import MainPage
+from page_objects.base_page import BasePage
 import allure
 
 
-class LoginPage(MainPage):
+class LoginPage(BasePage):
 
     @allure.step("Клик на ссылку 'Восстановить пароль'")
     def click_forgot_password_link(self):

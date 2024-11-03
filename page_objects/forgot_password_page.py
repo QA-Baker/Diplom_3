@@ -1,10 +1,10 @@
 import data
 from locators.forgot_password_locators import ForgotPasswordLocators
-from page_objects.main_page import MainPage
+from page_objects.base_page import BasePage
 import allure
 
 
-class ForgotPasswordPage(MainPage):
+class ForgotPasswordPage(BasePage):
 
     @allure.step("Открытие страницы восстановления пароля")
     def go_to_forgot_password_page(self):

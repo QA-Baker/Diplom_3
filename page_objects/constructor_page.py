@@ -1,10 +1,10 @@
 from data import BASE_URL
 from locators.constructor_page_locators import ConstructorPageLocators
-from page_objects.main_page import MainPage
+from page_objects.base_page import BasePage
 import allure
 
 
-class ConstructorPage(MainPage):
+class ConstructorPage(BasePage):
 
     @allure.step("Проверка нахождения на странице конструктора")
     def is_on_constructor_page(self):

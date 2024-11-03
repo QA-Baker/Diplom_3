@@ -1,11 +1,11 @@
 from selenium.common import TimeoutException
 from data import ORDER_FEED_URL
 from locators.order_feed_page_locators import FeedPageLocators
-from page_objects.main_page import MainPage
+from page_objects.base_page import BasePage
 import allure
 
 
-class OrderFeedPage(MainPage):
+class OrderFeedPage(BasePage):
 
     @allure.step("Переход на страницу ленты заказов")
     def go_to_feed_page(self):

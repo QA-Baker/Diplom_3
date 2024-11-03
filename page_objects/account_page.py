@@ -1,9 +1,9 @@
 from locators.account_page_locators import AccountPageLocators
-from page_objects.main_page import MainPage
+from page_objects.base_page import BasePage
 import allure
 
 
-class AccountPage(MainPage):
+class AccountPage(BasePage):
 
     @allure.step("Переход в Личный кабинет")
     def go_to_account(self):

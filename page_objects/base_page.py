@@ -4,7 +4,7 @@ import allure
 from data import BASE_URL, LOGIN_URL
 
 
-class MainPage:
+class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
@@ -22,7 +22,7 @@ class MainPage:
         element = self.wait.until(EC.element_to_be_clickable(locator))
         element.click()
 
-    @allure.step("Java клик по элементу")
+    @allure.step("JavaScript клик")
     def click_element_with_js(self, locator):
         element = self.driver.find_element(*locator)
         self.driver.execute_script("arguments[0].click();", element)

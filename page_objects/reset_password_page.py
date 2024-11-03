@@ -1,9 +1,9 @@
 from locators.reset_password_locators import ResetPasswordLocators
-from page_objects.main_page import MainPage
+from page_objects.base_page import BasePage
 import allure
 
 
-class ResetPasswordPage(MainPage):
+class ResetPasswordPage(BasePage):
     @allure.step("Ожидание появления элемента 'Введите код из письма'")
     def wait_for_code_label(self):
         self.wait_for_element(ResetPasswordLocators.CODE_INPUT_LABEL)
